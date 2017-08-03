@@ -5,6 +5,7 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     filename: 'bundle.js'
   },
   module: {
@@ -24,7 +25,10 @@ const config = {
       }
     ]
   },
-
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './'
+  }
 }
 
 module.exports = config
