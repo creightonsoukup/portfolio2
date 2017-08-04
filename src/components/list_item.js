@@ -2,8 +2,8 @@ import React from 'react';
 
 const ListItem = (props) => {
   return (
-    <div className='list-item'>
-    </div>
+    <li className='list-item'>
+    </li>
   )
 }
 

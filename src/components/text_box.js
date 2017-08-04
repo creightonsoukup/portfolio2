@@ -6,4 +6,4 @@ const TextBox = (props) => {
     </div>
   )
 }
-export default Textbox
+export default TextBox

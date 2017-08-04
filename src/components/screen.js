@@ -5,6 +5,7 @@ import Gallery from './gallery'
 const Screen = (props) => {
   return (
     <div className='screen'>
+      <Gallery/>
     </div>
   )
 }

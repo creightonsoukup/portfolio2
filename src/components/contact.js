@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from './contact_form'
+import ContactForm from '../containers/contact_form'
 
 const Contact = (props) => {
   return (

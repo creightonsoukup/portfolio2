@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Homepage from '../containers/homepage'
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.props.children}
+        <Homepage />
       </div>
     )
   }
