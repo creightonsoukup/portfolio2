@@ -1,0 +1,22 @@
+@import 'reset';
+@import 'animations';
+@import 'homepage';
+@import 'header';
+
+.header-text {
+  font-family: Campton Light;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.c-loader {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+}

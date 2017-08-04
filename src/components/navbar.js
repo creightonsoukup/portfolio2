@@ -3,10 +3,11 @@ import List from './list';
 import Logo from './logo'
 
 const Navbar = (props) => {
+  const navBarItems = ['portolio', 'about', 'contact', 'blog']
   return (
     <div className='navbar'>
       <Logo/>
-      <List />
+      <List nav={navBarItems} />
     </div>
   )
 }
