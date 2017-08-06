@@ -5,10 +5,21 @@ import Logo from './logo'
 const Navbar = (props) => {
   const navBarItems = ['portolio', 'about', 'contact', 'blog']
   return (
-    <div className='navbar'>
+    <nav className='navbar'>
       <Logo/>
-      <List nav={navBarItems} />
-    </div>
+      <div className='navlinks'>
+        { props.openNav ? (
+          <div className='dropdown'onClick={props.toggleNav}>
+            <i className="fa fa-times"></i>
+            <List nav={navBarItems} />
+          </div>
+        ) : (
+          <div onClick={props.toggleNav}>
+            <i className="fa fa-bars-btb"></i>
+          </div>
+        )}
+      </div>
+    </nav>
   )
 }
 

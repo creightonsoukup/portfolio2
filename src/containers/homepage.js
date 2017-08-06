@@ -19,8 +19,15 @@ import _ from 'lodash';
        contactEmail: '',
        contactBody: '',
        toggleVideo: false,
-       showLoader: true
+       showLoader: true,
+       openNav: false
      }
+
+     this.toggleNav = this.toggleNav.bind(this)
+   }
+
+   toggleNav() {
+     this.setState({openNav: !this.state.openNav})
    }
    render() {
      const loader = _.debounce(() => {this.setState({showLoader: false})}, 3000)
@@ -31,7 +38,7 @@ import _ from 'lodash';
           { this.state.showLoader &&
             <CLoader/>
           }
-          <Header/>
+          <Header toggleNav={this.toggleNav} openNav={this.state.openNav}/>
           <IntroText/>
         </div>
         <Projects/>

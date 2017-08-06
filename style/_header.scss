@@ -1,16 +1,73 @@
 .header {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .navbar {
     max-height: 100px;
     width: 100vw;
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
+    .navlinks {
+      i {
+        color: white;
+        font-size: 2.5em;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 25px;
+        margin-right: 25px;
+        z-index: 50;
+      }
+      .dropdown {
+        min-width: 100vw;
+        min-height: 100vh;
+        background-color: black;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        position: absolute;
+        ul {
+          font-family: Campton Light;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          margin: 50% auto;
+          height: 100%;
+          width: 100%;
+          li {
+            font-size: 1.5rem;
+            padding: 10px 0 10px;
+            text-align: center;
+          }
+        }
+      }
+    }
     .logo {
       img {
         max-height: 75px;
         padding: 15px;
+        margin-top: 10px;
       }
+    }
+  }
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 2.2rem;
+  }
+  .header-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h2 {
+      color: white;
+      font-size: 1.25rem;
+      padding: 5px 5px;
     }
   }
 }

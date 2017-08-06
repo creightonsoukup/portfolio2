@@ -2,8 +2,9 @@ import React from 'react';
 
 const TextBox = (props) => {
   return (
-    <div className='text-box'>
-    </div>
+    <section className='text-box'>
+        <p>{props.text}</p>
+    </section>
   )
 }
 export default TextBox
