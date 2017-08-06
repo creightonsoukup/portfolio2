@@ -5,6 +5,7 @@ const IntroText = (props) => {
   return (
     <div className='intro-text'>
       <h2>{introText}</h2>
+      <i className="fa fa-angle-down"></i>
     </div>
   )
 }
