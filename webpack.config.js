@@ -35,7 +35,8 @@ const config = {
   devServer: {
     historyApiFallback: true,
     contentBase: './'
-  }
+  },
+  devtool: 'inline-source-map',
 }
 
 module.exports = config

@@ -5,15 +5,15 @@
 }
 
 .c-loader {
-  min-height: 100%;
-  min-width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
   background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
   z-index: 100;
+  position: fixed;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }

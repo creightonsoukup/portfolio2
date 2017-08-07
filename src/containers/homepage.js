@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/header'
-import Projects from '../components/project'
+import Projects from '../components/projects'
 import HomepageSection from '../components/homepage_section';
 import Contact from '../components/contact'
 import PageFooter from '../components/page_footer';
@@ -31,6 +31,15 @@ import _ from 'lodash';
    }
    render() {
      const loader = _.debounce(() => {this.setState({showLoader: false})}, 3000)
+     const projectDemo = {}
+     projectDemo.id = 1
+     projectDemo.screenUrl = 'https://s3.amazonaws.com/creightonsoukup/portfolio-site/screen.jpg'
+     projectDemo.name = 'Madison Mckinley Designs'
+     projectDemo.subheader = 'fullstack ecommerce solution including development, design, and content creation'
+     projectDemo.description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+     projectDemo.links = ['https://www.google.com','https://github.com/creightonsoukup']
+     const projects = []
+     projects.push(projectDemo)
      loader()
      return (
        <div className='homepage'>
@@ -41,7 +50,7 @@ import _ from 'lodash';
           <Header toggleNav={this.toggleNav} openNav={this.state.openNav}/>
           <IntroText/>
         </div>
-        <Projects/>
+        <Projects projects={projects}/>
         <HomepageSection />
         <HomepageSection />
         <Contact/>
