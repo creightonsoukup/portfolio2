@@ -5,7 +5,6 @@ import TextBox from './text_box';
 import ProjectFooter from './project_footer'
 
 const Project = (props) => {
-  console.log(props.project)
   return (
     <div className='project'>
       <ProjectHeader

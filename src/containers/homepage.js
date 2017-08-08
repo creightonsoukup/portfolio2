@@ -23,11 +23,18 @@ import _ from 'lodash';
      }
 
      this.toggleNav = this.toggleNav.bind(this)
+     this.submitTicket = this.submitTicket.bind(this)
    }
 
    toggleNav() {
      this.setState({openNav: !this.state.openNav})
    }
+
+   submitTicket(ticket) {
+     console.log(ticket)
+   }
+
+
    render() {
      const loader = _.debounce(() => {this.setState({showLoader: false})}, 3000)
      const projectDemo = {}
@@ -51,7 +58,7 @@ import _ from 'lodash';
           <IntroText/>
         </div>
         <Projects projects={projects}/>
-        <Contact/>
+        <Contact submitTicket={this.submitTicket}/>
         <PageFooter />
        </div>
      )

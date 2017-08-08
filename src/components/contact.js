@@ -6,7 +6,7 @@ const Contact = (props) => {
   return (
     <div className='contact'>
       <SectionHeader header={'contact'}/>
-      <ContactForm />
+      <ContactForm submitTicket={props.submitTicket} />
     </div>
   )
 }

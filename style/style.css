@@ -111,14 +111,16 @@ table {
         color: white;
         font-size: 2rem; }
   .homepage .contact {
-    min-height: 85vh;
+    min-height: 80vh;
     min-width: 100vw;
     background-color: black;
     color: white; }
     .homepage .contact .section-header {
       padding: 5vw; }
     .homepage .contact .contact-form {
-      min-height: 450px; }
+      min-height: 450px;
+      padding-bottom: 5vw;
+      background-color: black; }
       .homepage .contact .contact-form form {
         min-height: 450px;
         display: flex;
@@ -153,13 +155,34 @@ table {
           background-color: transparent;
           min-height: 150px; }
       .homepage .contact .contact-form .submit {
-        padding: 15px 50px;
+        padding: 12px 50px;
         border: 4px solid white;
         color: white;
         font-family: 'Roboto', sans-serif;
         font-size: 18px;
         align-self: center;
         box-sizing: content-box; }
+  .homepage .page-footer {
+    background-color: black;
+    max-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    border: none; }
+    .homepage .page-footer .fa {
+      font-size: 2.5rem;
+      padding: 10px;
+      transition: font-size 1s ease;
+      -webkit-transition: font-size 1s ease; }
+    .homepage .page-footer .fa:hover {
+      font-size: 2.7rem; }
+    .homepage .page-footer a {
+      font-size: 1rem;
+      padding: 5px;
+      text-decoration: none;
+      color: white; }
 
 .header {
   min-height: 50vh;
