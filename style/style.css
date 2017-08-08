@@ -110,6 +110,56 @@ table {
       .homepage .full-screen .intro-text i {
         color: white;
         font-size: 2rem; }
+  .homepage .contact {
+    min-height: 85vh;
+    min-width: 100vw;
+    background-color: black;
+    color: white; }
+    .homepage .contact .section-header {
+      padding: 5vw; }
+    .homepage .contact .contact-form {
+      min-height: 450px; }
+      .homepage .contact .contact-form form {
+        min-height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
+        .homepage .contact .contact-form form input {
+          width: 70vw;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 400;
+          color: white;
+          background-color: transparent;
+          font-size: 18px;
+          border: 4px solid white;
+          padding: 5px;
+          min-height: 30px;
+          align-self: center; }
+        .homepage .contact .contact-form form input::placeholder {
+          color: white;
+          font-size: 18px; }
+        .homepage .contact .contact-form form textarea::placeholder {
+          color: white;
+          font-size: 18px; }
+        .homepage .contact .contact-form form textarea {
+          width: 70vw;
+          align-self: center;
+          padding: 5px;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+          color: white;
+          border: 4px solid white;
+          background-color: transparent;
+          min-height: 150px; }
+      .homepage .contact .contact-form .submit {
+        padding: 15px 50px;
+        border: 4px solid white;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        align-self: center;
+        box-sizing: content-box; }
 
 .header {
   min-height: 50vh;
@@ -168,8 +218,9 @@ table {
     text-align: center; }
     .header .header-list h2 {
       color: white;
-      font-size: 1.25rem;
-      padding: 5px 5px; }
+      font-size: 1.5rem;
+      padding: 5px 5px;
+      font-style: italic; }
 
 .projects {
   height: auto;
