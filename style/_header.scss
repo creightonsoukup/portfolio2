@@ -4,23 +4,24 @@
   flex-direction: column;
   justify-content: space-between;
   .navbar {
-    max-height: 100px;
+    max-height: 140px;
     width: 100vw;
     color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
+    background-color: black;
     .navlinks {
       i {
         color: white;
-        font-size: 2.5em;
+        font-size: 2.8em;
         position: absolute;
         right: 0;
         top: 0;
-        margin-top: 25px;
-        margin-right: 25px;
+        margin-top: 20px;
+        margin-right: 20px;
         z-index: 50;
       }
       .dropdown {
@@ -31,27 +32,30 @@
         top: 0;
         left: 0;
         position: absolute;
-        ul {
-          font-family: Campton Light;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          margin: 50% auto;
-          height: 100%;
-          width: 100%;
-          li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Campton Light;
+        li {
+          padding: 10px;
+        }
+
+        a {
             font-size: 1.5rem;
             padding: 10px 0 10px;
             text-align: center;
+            color: white;
+            text-decoration: none;
           }
-        }
       }
     }
     .logo {
       img {
-        max-height: 75px;
-        padding: 15px;
-        margin-top: 10px;
+        max-height: 58px;
+        padding:10px;
+        margin-top: 3px;
+        margin-bottom: 1px;
       }
     }
   }
@@ -59,6 +63,7 @@
     color: white;
     text-align: center;
     font-size: 2.2rem;
+    margin-top: 150px;
   }
   .header-list {
     display: flex;

@@ -10,7 +10,6 @@ const List = (props) => {
   return (
     <ul className='list'>
       {props.nav.map(renderList)}
-      <li><a href={require('../assets/Soukup_Resume.pdf')} download>download resume</a></li>
     </ul>
 
   )

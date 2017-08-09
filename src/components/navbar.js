@@ -1,6 +1,8 @@
 import React from 'react';
 import List from './list';
 import Logo from './logo'
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 const Navbar = (props) => {
   const navBarItems = ['portolio', 'contact', 'blog', 'resume', 'client login']
@@ -9,10 +11,14 @@ const Navbar = (props) => {
       <Logo/>
       <div className='navlinks'>
         { props.openNav ? (
-          <div className='dropdown'onClick={props.toggleNav}>
+          <ul className='dropdown' onClick={props.toggleNav}>
             <i className="fa fa-times"></i>
-            <List nav={navBarItems} />
-          </div>
+            <li><Link to='/#portfolio'>portfolio</Link></li>
+            <li><Link to='/#contact'>contact</Link></li>
+            <li><Link to='/blog'>blog</Link></li>
+            <li><a href={require('../assets/Soukup_Resume.pdf')} download>download resume</a></li>
+            <li><Link to='/login'>client login</Link></li>
+          </ul>
         ) : (
           <div onClick={props.toggleNav}>
             <i className="fa fa-bars-btb"></i>
