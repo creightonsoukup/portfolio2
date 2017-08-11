@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     .intro-text {
-      min-height: 50vh;
+      min-height: 45vh;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -15,22 +15,23 @@
       align-content: center;
       align-items: center;
       h2 {
-        text-align: center;
-        font-size: 1.25rem;
+        text-align: right;
+        font-size: 5.5vw;
         color: white;
         font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        padding: 10%;
-        line-height: 1.5rem;
+        font-weight: 100;
+        padding: 15%;
+        line-height: 6vh;
+        box-sizing: content-box;
       }
       i {
         color: white;
         font-size: 2rem;
+        padding: 10px;
       }
     }
   }
   .contact {
-    min-height: 80vh;
     min-width: 100vw;
     background-color: black;
     color: white;
@@ -38,11 +39,11 @@
         padding: 5vw;
     }
     .contact-form {
-      min-height: 450px;
+      min-height: 80vh;
       padding-bottom: 5vw;
       background-color: black;
       form {
-        min-height: 450px;
+        min-height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

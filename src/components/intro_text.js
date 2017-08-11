@@ -1,11 +1,11 @@
 import React from 'react';
 
 const IntroText = (props) => {
-  const introText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+  const greeting = 'scroll down,'
+  const introText = 'see what I am working on, what I am talking about, and where I have been exploring'
   return (
     <div className='intro-text'>
-      <h2>{introText}</h2>
-      <i className="fa fa-angle-down"></i>
+      <h2>{greeting}<br/>{introText}</h2>
     </div>
   )
 }

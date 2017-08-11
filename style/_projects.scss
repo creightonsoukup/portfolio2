@@ -53,15 +53,15 @@
   }
   .project-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     box-sizing: border-box;
-    padding: 15px 40px;
     .button {
-      min-width: 80px;
+      min-width: 20vw;
       border: 3px solid black;
       color: black;
       text-align: center;
       padding: 10px;
+      margin: 5vw;
     }
   }
 }

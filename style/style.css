@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,300i");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,300i,100,100i");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -83,6 +83,74 @@ table {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+.header {
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .header .navbar {
+    max-height: 140px;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: black; }
+    .header .navbar .navlinks i {
+      color: white;
+      font-size: 2.8em;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-top: 20px;
+      margin-right: 20px;
+      z-index: 50; }
+    .header .navbar .navlinks .dropdown {
+      min-width: 100vw;
+      min-height: 100vh;
+      background-color: black;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Campton Light; }
+      .header .navbar .navlinks .dropdown li {
+        padding: 10px; }
+      .header .navbar .navlinks .dropdown a {
+        font-size: 1.5rem;
+        padding: 10px 0 10px;
+        text-align: center;
+        color: white;
+        text-decoration: none; }
+    .header .navbar .logo img {
+      max-height: 58px;
+      padding: 10px;
+      margin-top: 3px;
+      margin-bottom: 1px; }
+  .header h1 {
+    color: white;
+    text-align: center;
+    font-size: 9vw;
+    margin-top: 225px; }
+  .header h2 {
+    color: white;
+    font-size: 6vw;
+    padding: 2vw;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Roboto' sans-serif; }
+  .header .header-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+
 .homepage {
   position: relative; }
   .homepage .full-screen {
@@ -92,7 +160,7 @@ table {
     display: flex;
     flex-direction: column; }
     .homepage .full-screen .intro-text {
-      min-height: 50vh;
+      min-height: 45vh;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -100,29 +168,30 @@ table {
       align-content: center;
       align-items: center; }
       .homepage .full-screen .intro-text h2 {
-        text-align: center;
-        font-size: 1.25rem;
+        text-align: right;
+        font-size: 5.5vw;
         color: white;
         font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        padding: 10%;
-        line-height: 1.5rem; }
+        font-weight: 100;
+        padding: 15%;
+        line-height: 6vh;
+        box-sizing: content-box; }
       .homepage .full-screen .intro-text i {
         color: white;
-        font-size: 2rem; }
+        font-size: 2rem;
+        padding: 10px; }
   .homepage .contact {
-    min-height: 80vh;
     min-width: 100vw;
     background-color: black;
     color: white; }
     .homepage .contact .section-header {
       padding: 5vw; }
     .homepage .contact .contact-form {
-      min-height: 450px;
+      min-height: 80vh;
       padding-bottom: 5vw;
       background-color: black; }
       .homepage .contact .contact-form form {
-        min-height: 450px;
+        min-height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -187,71 +256,6 @@ table {
       text-decoration: none;
       color: white; }
 
-.header {
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-  .header .navbar {
-    max-height: 140px;
-    width: 100vw;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    background-color: black; }
-    .header .navbar .navlinks i {
-      color: white;
-      font-size: 2.8em;
-      position: absolute;
-      right: 0;
-      top: 0;
-      margin-top: 20px;
-      margin-right: 20px;
-      z-index: 50; }
-    .header .navbar .navlinks .dropdown {
-      min-width: 100vw;
-      min-height: 100vh;
-      background-color: black;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-family: Campton Light; }
-      .header .navbar .navlinks .dropdown li {
-        padding: 10px; }
-      .header .navbar .navlinks .dropdown a {
-        font-size: 1.5rem;
-        padding: 10px 0 10px;
-        text-align: center;
-        color: white;
-        text-decoration: none; }
-    .header .navbar .logo img {
-      max-height: 58px;
-      padding: 10px;
-      margin-top: 3px;
-      margin-bottom: 1px; }
-  .header h1 {
-    color: white;
-    text-align: center;
-    font-size: 2.2rem;
-    margin-top: 150px; }
-  .header .header-list {
-    display: flex;
-    flex-direction: column;
-    text-align: center; }
-    .header .header-list h2 {
-      color: white;
-      font-size: 1.5rem;
-      padding: 5px 5px;
-      font-style: italic; }
-
 .projects {
   height: auto;
   width: 100vw;
@@ -297,14 +301,14 @@ table {
       line-height: 1.3rem; }
   .projects .project-footer {
     display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 15px 40px; }
+    justify-content: center;
+    box-sizing: border-box; }
     .projects .project-footer .button {
-      min-width: 80px;
+      min-width: 20vw;
       border: 3px solid black;
       color: black;
       text-align: center;
-      padding: 10px; }
+      padding: 10px;
+      margin: 5vw; }
 
 /*# sourceMappingURL=style.css.map */
