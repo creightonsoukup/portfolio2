@@ -4,7 +4,7 @@ import SectionHeader from './section_header';
 
 const TweetBox = (props) => {
   return (
-    <section className='tweetbox'>
+    <section id='feed' className='tweetbox'>
       <SectionHeader header={'tweets'}/>
       <List content={'twitter'} tweets={props.tweets}/>
     </section>

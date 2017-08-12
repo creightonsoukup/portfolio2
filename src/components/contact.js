@@ -4,10 +4,10 @@ import SectionHeader from './section_header';
 
 const Contact = (props) => {
   return (
-    <div id='contact' className='contact'>
+    <section id='contact' className='contact'>
       <SectionHeader header={'contact'}/>
       <ContactForm submitTicket={props.submitTicket} />
-    </div>
+    </section>
   )
 }
 

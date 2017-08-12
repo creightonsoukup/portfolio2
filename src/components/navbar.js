@@ -14,9 +14,11 @@ const Navbar = (props) => {
           <ul className='dropdown' onClick={props.toggleNav}>
             <i className="fa fa-times"></i>
             <li><Link to='/#portfolio'>portfolio</Link></li>
+            <li><Link to='/#feed'>feed</Link></li>
+            <li><Link to='/#blog'>blog</Link></li>
             <li><Link to='/#contact'>contact</Link></li>
-            <li><Link to='/blog'>blog</Link></li>
             <li><a href={require('../assets/Soukup_Resume.pdf')} download>download resume</a></li>
+            <li>-</li>
             <li><Link to='/login'>client login</Link></li>
           </ul>
         ) : (

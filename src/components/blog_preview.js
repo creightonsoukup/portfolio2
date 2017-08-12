@@ -4,7 +4,7 @@ import SectionHeader from './section_header'
 
 const BlogPreview = (props) => {
   return (
-    <section className='blog-snippit'>
+    <section id='blog' className='blog-snippit'>
       <SectionHeader header='blog'/>
       <List content={'blog'} />
     </section>
