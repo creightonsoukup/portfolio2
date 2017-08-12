@@ -7,12 +7,17 @@ const List = (props) => {
     return <ListItem key={props.nav.indexOf(listItem)}listItem={listItem}/>
   }
 
-  return (
-    <ul className='list'>
-      {props.nav.map(renderList)}
-    </ul>
-
-  )
+  if(props.content == 'twitter') {
+    return (
+      <div className='twitter'>
+        <p>{'coming soon...'}</p>
+      </div>
+    )
+  } else {
+    return (
+      this.props.nav.renderList(listItem)
+    )
+  }
 }
 
 export default List;

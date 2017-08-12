@@ -2,7 +2,7 @@ import React from 'react';
 
 const SectionHeader = (props) => {
   return (
-    <h2  className='section-header sub-header-text'>
+    <h2  className='section-header header-text'>
       {props.header}
     </h2>
   )
