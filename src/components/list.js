@@ -7,9 +7,9 @@ const List = (props) => {
     return <ListItem key={props.nav.indexOf(listItem)}listItem={listItem}/>
   }
 
-  if(props.content == 'twitter') {
+  if(props.content == 'twitter' || 'blog') {
     return (
-      <div className='twitter'>
+      <div className='coming-soon'>
         <p>{'coming soon...'}</p>
       </div>
     )
