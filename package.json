@@ -10,7 +10,7 @@
   "scripts": {
     "dev-start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "dev": "webpack && npm start",
-    "postinstall": "webpack -p",
+    "postinstall": "webpack && npm start",
     "start": "node index.js"
   },
   "repository": {
