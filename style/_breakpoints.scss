@@ -58,3 +58,32 @@ $breakpoints: (phone: 320px,
     }
   }
 }
+
+@include media('>tablet','<desktop') {
+  nav {
+    font-family: Campton Light;
+    z-index: 100;
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 2vw;
+    }
+    position: relative;
+    .open {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100vw;
+      position: absolute;
+      ul {
+        display: flex;
+        min-width: 40vw;
+        justify-content: space-around;
+        padding: 0 10px;
+      }
+      .right {
+        min-width: 35vw;
+      }
+    }
+  }
+}

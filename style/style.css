@@ -121,7 +121,7 @@ table {
   align-items: center;
   position: fixed;
   background-color: black; }
-  .navbar .navlinks i {
+  .navbar .collapse i {
     color: white;
     font-size: 2.8em;
     position: absolute;
@@ -130,7 +130,7 @@ table {
     margin-top: 20px;
     margin-right: 20px;
     z-index: 50; }
-  .navbar .navlinks .dropdown {
+  .navbar .collapse .dropdown {
     min-width: 100vw;
     min-height: 100vh;
     background-color: black;
@@ -143,9 +143,9 @@ table {
     justify-content: center;
     align-items: center;
     font-family: Campton Light; }
-    .navbar .navlinks .dropdown li {
+    .navbar .collapse .dropdown li {
       padding: 10px; }
-    .navbar .navlinks .dropdown a {
+    .navbar .collapse .dropdown a {
       font-size: 1.5rem;
       padding: 10px 0 10px;
       text-align: center;
@@ -395,5 +395,27 @@ table {
       width: 85vw;
       position: absolute;
       right: 0; } }
+@media (min-width: 769px) and (max-width: 1023px) {
+  nav {
+    font-family: Campton Light;
+    z-index: 100;
+    position: relative; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 2vw; }
+    nav .open {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100vw;
+      position: absolute; }
+      nav .open ul {
+        display: flex;
+        min-width: 40vw;
+        justify-content: space-around;
+        padding: 0 10px; }
+      nav .open .right {
+        min-width: 35vw; } }
 
 /*# sourceMappingURL=style.css.map */
