@@ -19,8 +19,8 @@ const Navbar = (props) => {
             <li><Link to='/#contact'>contact</Link></li>
           </ul>
           <ul className='right'>
-            <li><a href={require('../assets/Soukup_Resume.pdf')} download>download resume</a></li>
-            <li><Link to='/login'>client login</Link></li>
+            <li><a href={require('../assets/Soukup_Resume.pdf')} download>resume</a></li>
+            <li><Link to='/login'>login</Link></li>
           </ul>
         </div>
       ) : (
@@ -34,7 +34,7 @@ const Navbar = (props) => {
               <li><Link to='/#contact'>contact</Link></li>
               <li><a href={require('../assets/Soukup_Resume.pdf')} download>download resume</a></li>
               <li>-</li>
-              <li><Link to='/login'>client login</Link></li>
+              <li><Link to='/login'>login</Link></li>
             </ul>
           ) : (
             <div onClick={props.toggleNav}>

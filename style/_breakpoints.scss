@@ -1,7 +1,7 @@
 $breakpoints: (phone: 320px,
   tablet: 768px, desktop: 1024px, smallheight:750px);
 
-@include media(">tablet", "<desktop","height<smallheight") {
+@include media(">tablet") {
   .header {
     min-height: 65vh;
     justify-content: space-between;
@@ -57,6 +57,23 @@ $breakpoints: (phone: 320px,
       right: 0;
     }
   }
+  .projects .project-footer .button:hover {
+    background-color: black;
+    color: white;
+    font-weight: 100;
+  }
+  .homepage .contact-form .submit:hover {
+    background-color: white;
+    color: black;
+    font-weight: 300;
+  }
+  .tweetbox {
+    min-height: 80vh;
+  }
+  .coming-soon {
+    min-height: 80vh;
+  }
+
 }
 
 @include media('>tablet','<desktop') {
@@ -82,7 +99,39 @@ $breakpoints: (phone: 320px,
         padding: 0 10px;
       }
       .right {
-        min-width: 35vw;
+        min-width: 20vw;
+      }
+    }
+  }
+}
+
+@include media('>=desktop') {
+  nav {
+    font-family: Campton Light;
+    z-index: 100;
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5vw;
+    }
+    position: relative;
+    .open {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 100vw;
+      position: absolute;
+      ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 0;
+      }
+      .right {
+        min-width: 0;
+        margin-right: 1vw;
+      }
+      li {
+        padding: 0 1vw;
       }
     }
   }
