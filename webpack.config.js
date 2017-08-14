@@ -1,10 +1,13 @@
 const path = require('path');
 
-const config = {
-  entry: './src/index.js',
+var DIST_DIR   = path.join(__dirname, "dist"),
+    CLIENT_DIR = path.join(__dirname, "src");
+
+module.exports = {
+  context: CLIENT_DIR,
+  entry: './main',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    path: DIST_DIR,
     filename: 'bundle.js'
   },
   module: {
@@ -13,14 +16,24 @@ const config = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          query: {
+            presets: ['react', 'env']
+          }
         }
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+          {loader: 'sass-loader'}
+        ]
+      },
+      { test: /\.scss$/,
         use: {
-          loader: 'css-loader'
-        }
+              loader: "sass-loader"
+             }
       },
       {
         test: /\.(jpg|png|svg|pdf)$/,
@@ -31,11 +44,8 @@ const config = {
       }
     ]
   },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
+  resolve : {
+    extensions: [' ','.js']
   },
-  devtool: 'inline-source-map',
+  devtool: 'inline-source-map'
 }
-
-module.exports = config

@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev-start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack && npm start",
     "postinstall": "webpack -p",
     "start": "node index.js"
   },
@@ -43,7 +43,10 @@
     "react-router-hash-link": "^1.1.0",
     "redux": "^3.7.2",
     "sass-loader": "^6.0.6",
-    "webpack": "^3.4.1"
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-hot-middleware": "^2.18.2"
   },
   "devDependencies": {
     "file-loader": "^0.11.2",

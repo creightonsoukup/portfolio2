@@ -1,24 +1,16 @@
-const express = require('express');
-const graphqlHTTP = require('express-graphql');
-const schema = require('./schema')
-const port = process.env.PORT || 6000;
-const path = require('path');
+const path = require("path"),
+    express = require("express");
 
-const root = { hello : () => 'Hello World'}
+const DIST_DIR = path.join(__dirname, "dist"),
+    PORT = 3000,
+    app = express();
 
-const app = express()
+//Serving the files on the dist folder
+app.use(express.static(DIST_DIR));
 
-app.use(express.static(__dirname));
+//Send index.html when the user access the web
+app.get("*", function (req, res) {
+  res.sendFile(path.join(DIST_DIR, "index.html"));
+});
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'))
-})
-
-app.use('/graphql', graphqlHTTP({
-  schema: schema,
-  rootValue: root,
-  graphiql: true
-}));
-
-app.listen(port);
-console.log('App listening on port:', port)
+app.listen(PORT);
