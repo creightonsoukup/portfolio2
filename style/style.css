@@ -50,7 +50,8 @@ table {
   font-family: Campton Light;
   font-weight: normal;
   font-style: normal;
-  font-size: 2rem; }
+  font-size: 5vw;
+  padding-bottom: 15px; }
 
 .sub-header-text {
   font-family: Campton Light;
@@ -84,72 +85,77 @@ table {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 .header {
-  min-height: 55vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
-  .header .navbar {
-    max-height: 140px;
-    width: 100vw;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    background-color: black; }
-    .header .navbar .navlinks i {
-      color: white;
-      font-size: 2.8em;
-      position: absolute;
-      right: 0;
-      top: 0;
-      margin-top: 20px;
-      margin-right: 20px;
-      z-index: 50; }
-    .header .navbar .navlinks .dropdown {
-      min-width: 100vw;
-      min-height: 100vh;
-      background-color: black;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-family: Campton Light; }
-      .header .navbar .navlinks .dropdown li {
-        padding: 10px; }
-      .header .navbar .navlinks .dropdown a {
-        font-size: 1.5rem;
-        padding: 10px 0 10px;
-        text-align: center;
-        color: white;
-        text-decoration: none; }
-    .header .navbar .logo img {
-      max-height: 58px;
-      padding: 10px;
-      margin-top: 3px;
-      margin-bottom: 1px; }
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 85px;
+  box-sizing: border-box; }
   .header h1 {
     color: white;
     text-align: center;
-    font-size: 9vw;
-    margin-top: 225px; }
-  .header h2 {
-    color: white;
-    font-size: 6vw;
-    padding: 2vw;
-    text-align: center;
-    font-weight: 100;
-    font-family: 'Roboto' sans-serif; }
+    font-size: 9vw; }
   .header .header-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 5vh;
+    font-family: 'Roboto', sans-serif; }
+    .header .header-list h2 {
+      color: white;
+      font-size: 6vw;
+      padding: 2vw;
+      text-align: center;
+      font-weight: 100;
+      font-style: italic; }
+
+.navbar {
+  max-height: 85px;
+  width: 100vw;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: black; }
+  .navbar .navlinks i {
+    color: white;
+    font-size: 2.8em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    z-index: 50; }
+  .navbar .navlinks .dropdown {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Campton Light; }
+    .navbar .navlinks .dropdown li {
+      padding: 10px; }
+    .navbar .navlinks .dropdown a {
+      font-size: 1.5rem;
+      padding: 10px 0 10px;
+      text-align: center;
+      color: white;
+      text-decoration: none; }
+  .navbar .logo img {
+    max-height: 58px;
+    padding: 10px;
+    margin-top: 3px;
+    margin-bottom: 1px; }
 
 .homepage {
   position: relative; }
@@ -199,7 +205,7 @@ table {
         .homepage .contact .contact-form form input {
           width: 70vw;
           font-family: 'Roboto', sans-serif;
-          font-weight: 400;
+          font-weight: 100;
           color: white;
           background-color: transparent;
           font-size: 18px;
@@ -210,16 +216,18 @@ table {
           outline: none; }
         .homepage .contact .contact-form form input::placeholder {
           color: white;
-          font-size: 18px; }
+          font-size: 18px;
+          font-weight: 100; }
         .homepage .contact .contact-form form textarea::placeholder {
           color: white;
-          font-size: 18px; }
+          font-size: 18px;
+          font-weight: 100; }
         .homepage .contact .contact-form form textarea {
           width: 70vw;
           align-self: center;
           padding: 5px;
           font-family: 'Roboto', sans-serif;
-          font-weight: 400;
+          font-weight: 100;
           font-size: 18px;
           color: white;
           border: 3px solid white;
@@ -233,7 +241,8 @@ table {
         font-family: 'Roboto', sans-serif;
         font-size: 18px;
         align-self: center;
-        box-sizing: content-box; }
+        box-sizing: content-box;
+        font-weight: 100; }
   .homepage .page-footer {
     background-color: black;
     max-height: 10vh;
@@ -256,6 +265,34 @@ table {
       text-decoration: none;
       color: white; }
 
+.tweetbox {
+  min-height: 50vh;
+  background-color: black;
+  color: white;
+  padding: 5vw;
+  box-sizing: border-box;
+  width: 100vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100; }
+
+.coming-soon {
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vw; }
+
+.blog-snippit {
+  min-height: 50vh;
+  padding: 5vw;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  width: 100vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; }
+
 .projects {
   height: auto;
   width: 100vw;
@@ -265,8 +302,6 @@ table {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   padding: 5vw; }
-  .projects h2 {
-    padding-bottom: 15px; }
   .projects .project {
     min-width: 80vw;
     min-height: 100vh;
@@ -310,5 +345,55 @@ table {
       text-align: center;
       padding: 10px;
       margin: 5vw; }
+
+@media (min-width: 769px) and (max-width: 1023px) and (max-height: 749px) {
+  .header {
+    min-height: 65vh;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 15vw;
+    padding-top: 85px; }
+    .header h1 {
+      font-size: 7vw;
+      padding: 10vh 0;
+      align-self: center; }
+    .header .header-list {
+      justify-content: flex-end;
+      align-items: flex-end;
+      align-self: flex-end;
+      position: relative;
+      padding-top: 0; }
+      .header .header-list h2 {
+        font-size: 2.5vw;
+        text-align: right;
+        font-style: normal;
+        padding: 4px; }
+    .header .header-list:before {
+      content: '';
+      top: -5vh;
+      height: 3px;
+      background: white;
+      width: 85vw;
+      position: absolute;
+      right: -1; }
+
+  .homepage .full-screen .intro-text {
+    min-height: 35vh;
+    position: relative; }
+    .homepage .full-screen .intro-text h2 {
+      font-size: 2.5vw;
+      padding: 0;
+      text-align: left;
+      padding: 0 15vw;
+      line-height: 3.5vw;
+      padding: 0 15%; }
+    .homepage .full-screen .intro-text h2:before {
+      content: '';
+      top: 5vh;
+      height: 3px;
+      background: white;
+      width: 85vw;
+      position: absolute;
+      right: 0; } }
 
 /*# sourceMappingURL=style.css.map */

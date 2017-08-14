@@ -1,0 +1,60 @@
+$breakpoints: (phone: 320px,
+  tablet: 768px, desktop: 1024px, smallheight:750px);
+
+@include media(">tablet", "<desktop","height<smallheight") {
+  .header {
+    min-height: 65vh;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 15vw;
+    padding-top: 85px;
+    h1 {
+      font-size: 7vw;
+      padding: 10vh 0;
+      align-self: center;
+    }
+    .header-list {
+      justify-content: flex-end;
+      align-items: flex-end;
+      align-self: flex-end;
+      position: relative;
+      padding-top: 0;
+      h2 {
+        font-size: 2.5vw;
+        text-align: right;
+        font-style: normal;
+        padding: 4px;
+      }
+    }
+    .header-list:before {
+      content: '';
+      top: -5vh;
+      height: 3px;
+      background: white;
+      width: 85vw;
+      position: absolute;
+      right: -1;
+    }
+  }
+  .homepage .full-screen .intro-text {
+    min-height: 35vh;
+    position: relative;
+    h2 {
+      font-size: 2.5vw;
+      padding: 0;
+      text-align: left;
+      padding: 0 15vw;
+      line-height: 3.5vw;
+      padding: 0 15%;
+    }
+    h2:before {
+      content: '';
+      top: 5vh;
+      height: 3px;
+      background: white;
+      width: 85vw;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

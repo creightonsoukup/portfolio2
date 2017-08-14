@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "description": "Personal website to show portfolio",
   "main": "index.js",
+  "engines": {
+    "node": "8.1.4",
+    "npm": "5.3.0"
+  },
   "scripts": {
     "dev-start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack -p",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +33,7 @@
     "express": "^4.15.3",
     "express-graphql": "^0.6.7",
     "graphql": "^0.10.5",
+    "include-media": "^1.4.9",
     "node-sass": "^4.5.3",
     "path": "^0.12.7",
     "react": "^15.6.1",

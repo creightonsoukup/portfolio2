@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import Header from '../components/header'
 import Projects from '../components/projects'
 import Contact from '../components/contact'
+import TweetBox from '../components/tweet_box'
 import PageFooter from '../components/page_footer';
 import IntroText from '../components/intro_text';
 import CLoader from '../components/c_loader';
 import _ from 'lodash';
+import Navbar from '../components/navbar'
+import BlogPreview from '../components/blog_preview'
 
  class Homepage extends Component {
    constructor(props) {
@@ -38,6 +41,7 @@ import _ from 'lodash';
    render() {
      const loader = _.debounce(() => {this.setState({showLoader: false})}, 3000)
      const projectDemo = {}
+     const tweets = ['test', 'test','test']
      projectDemo.links = ['https://www.google.com','https://github.com/creightonsoukup']
      projectDemo.id = 1
      projectDemo.screenUrl = 'https://s3.amazonaws.com/creightonsoukup/portfolio-site/screen.jpg'
@@ -50,14 +54,17 @@ import _ from 'lodash';
      loader()
      return (
        <div className='homepage'>
+        <Navbar toggleNav={this.toggleNav} openNav={this.state.openNav}/>
         <div className='full-screen'>
           { this.state.showLoader &&
             <CLoader/>
           }
-          <Header toggleNav={this.toggleNav} openNav={this.state.openNav}/>
+          <Header/>
           <IntroText/>
         </div>
         <Projects projects={projects}/>
+        <TweetBox tweets={tweets}/>
+        <BlogPreview />
         <Contact submitTicket={this.submitTicket}/>
         <PageFooter />
        </div>
