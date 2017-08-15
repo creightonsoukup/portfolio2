@@ -35,6 +35,7 @@ import {getTwitterPosts} from '../actions/index'
      this.props.getTwitterPosts()
    }
 
+
    toggleNav() {
      this.setState({openNav: !this.state.openNav})
    }
@@ -45,10 +46,9 @@ import {getTwitterPosts} from '../actions/index'
 
 
    render() {
-     console.log(this.props)
+     const tweets = this.props.tweets[0]
      const loader = _.debounce(() => {this.setState({showLoader: false})}, 3000)
      const projectDemo = {}
-     const tweets = ['test', 'test','test']
      projectDemo.links = ['https://www.google.com','https://github.com/creightonsoukup']
      projectDemo.id = 1
      projectDemo.screenUrl = 'https://s3.amazonaws.com/creightonsoukup/portfolio-site/screen.jpg'
@@ -70,7 +70,7 @@ import {getTwitterPosts} from '../actions/index'
           <IntroText/>
         </div>
         <Projects projects={projects}/>
-        <TweetBox tweets={tweets}/>
+        { tweets && <TweetBox tweets={tweets}/>}
         <BlogPreview />
         <Contact submitTicket={this.submitTicket}/>
         <PageFooter />

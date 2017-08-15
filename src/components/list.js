@@ -1,5 +1,6 @@
 import React from 'react';
 import ListItem from './list_item';
+import Tweet from './tweet'
 
 const List = (props) => {
 
@@ -7,7 +8,17 @@ const List = (props) => {
     return <ListItem key={props.nav.indexOf(listItem)}listItem={listItem}/>
   }
 
-  if(props.content == 'twitter' || 'blog') {
+  const renderTweets = (tweet) => {
+    return <Tweet key={tweet.id} tweet={tweet} />
+  }
+
+  if(props.content == 'twitter') {
+    return (
+      <ul>
+        {props.tweets.map(renderTweets)}
+      </ul>
+    )
+  } else if (props.content == 'blog') {
     return (
       <div className='coming-soon'>
         <p>{'coming soon...'}</p>
@@ -15,7 +26,7 @@ const List = (props) => {
     )
   } else {
     return (
-      this.props.nav.renderList(listItem)
+      props.nav.renderList(listItem)
     )
   }
 }
