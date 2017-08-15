@@ -9,6 +9,8 @@ import CLoader from '../components/c_loader';
 import _ from 'lodash';
 import Navbar from '../components/navbar'
 import BlogPreview from '../components/blog_preview'
+import { connect } from 'react-redux'
+import {getTwitterPosts} from '../actions/index'
 
  class Homepage extends Component {
    constructor(props) {
@@ -29,6 +31,10 @@ import BlogPreview from '../components/blog_preview'
      this.submitTicket = this.submitTicket.bind(this)
    }
 
+   componentWillMount() {
+     this.props.getTwitterPosts()
+   }
+
    toggleNav() {
      this.setState({openNav: !this.state.openNav})
    }
@@ -39,6 +45,7 @@ import BlogPreview from '../components/blog_preview'
 
 
    render() {
+     console.log(this.props)
      const loader = _.debounce(() => {this.setState({showLoader: false})}, 3000)
      const projectDemo = {}
      const tweets = ['test', 'test','test']
@@ -72,4 +79,8 @@ import BlogPreview from '../components/blog_preview'
    }
  }
 
- export default Homepage
+ function mapStateToProps({tweets}) {
+   return { tweets }
+ }
+
+ export default connect(mapStateToProps, {getTwitterPosts})(Homepage)
