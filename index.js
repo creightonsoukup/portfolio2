@@ -1,16 +1,28 @@
+"use strict";
+require('dotenv').config()
 const path = require("path"),
-    express = require("express");
+    express = require("express"),
+    logger = require("morgan"),
+    bodyParser = require("body-parser");
+
 
 const DIST_DIR = path.join(__dirname, "dist"),
-    PORT = process.env.PORT || 3000,
-    app = express();
+      PORT = process.env.PORT || 3000,
+      app = express(),
+      routes = require('./routes');
 
-//Serving the files on the dist folder
+
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(DIST_DIR));
 
-//Send index.html when the user access the web
+app.use("/api", routes);
+
 app.get("*", function (req, res) {
   res.sendFile(path.join(DIST_DIR, "index.html"));
 });
 
 app.listen(PORT);
+
+module.exports = app;
