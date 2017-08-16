@@ -1,0 +1,32 @@
+.tweetbox {
+  background-color: black;
+  height: auto;
+  color: white;
+  padding: 5vw;
+  box-sizing: border-box;
+  width: 100vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .tweet {
+    padding: 4vh 0;
+    a {
+      color: white;
+      padding: 2vh;
+      font-size: 2.5vh;
+    }
+    p {
+      padding: 2vh;
+      line-height: 5vh;
+      font-size: 4vh;
+    }
+    span {
+      padding: 2vh;
+      font-size: 2.5vh;
+    }
+  }
+}

@@ -265,16 +265,6 @@ table {
       text-decoration: none;
       color: white; }
 
-.tweetbox {
-  min-height: 50vh;
-  background-color: black;
-  color: white;
-  padding: 5vw;
-  box-sizing: border-box;
-  width: 100vw;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100; }
-
 .coming-soon {
   min-height: 45vh;
   display: flex;
@@ -345,6 +335,33 @@ table {
       text-align: center;
       padding: 10px;
       margin: 5vw; }
+
+.tweetbox {
+  background-color: black;
+  height: auto;
+  color: white;
+  padding: 5vw;
+  box-sizing: border-box;
+  width: 100vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100; }
+  .tweetbox ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+  .tweetbox .tweet {
+    padding: 4vh 0; }
+    .tweetbox .tweet a {
+      color: white;
+      padding: 2vh;
+      font-size: 2.5vh; }
+    .tweetbox .tweet p {
+      padding: 2vh;
+      line-height: 5vh;
+      font-size: 4vh; }
+    .tweetbox .tweet span {
+      padding: 2vh;
+      font-size: 2.5vh; }
 
 @media (min-width: 769px) {
   .header {

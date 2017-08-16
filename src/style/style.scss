@@ -1,8 +1,9 @@
 @import 'reset';
 @import 'fonts';
-@import '../node_modules/include-media/dist/_include-media.scss';
+@import 'include-media.scss';
 @import 'animations';
 @import 'header';
 @import 'homepage';
 @import 'projects';
+@import 'tweet';
 @import 'breakpoints';
