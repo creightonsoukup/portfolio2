@@ -11,6 +11,7 @@ const Project = (props) => {
         subheader={props.project.subheader.toLowerCase()}
         name={props.project.name.toUpperCase()}/>
       <Screen tag={props.project.tag}/>
+      <TextBox text={props.project.tech}/>
       <ProjectFooter github={props.project.github} website={props.project.website}/>
     </div>
   )

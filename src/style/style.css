@@ -336,6 +336,8 @@ table {
       text-align: center;
       padding: 10px;
       margin: 5vw; }
+    .projects .project-footer a.button {
+      text-decoration: none; }
 
 .tweetbox {
   background-color: black;
