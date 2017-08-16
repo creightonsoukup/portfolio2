@@ -354,11 +354,12 @@ table {
     .tweetbox .tweet a {
       color: white;
       padding: 2vh;
-      font-size: 2.5vh; }
+      font-size: 2.5vh;
+      text-decoration: none; }
     .tweetbox .tweet p {
       padding: 2vh;
       line-height: 5vh;
-      font-size: 4vh; }
+      font-size: 3.5vh; }
     .tweetbox .tweet span {
       padding: 2vh;
       font-size: 2.5vh; }
