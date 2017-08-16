@@ -2,7 +2,6 @@ import React from 'react';
 import Project from './project';
 
 const Projects = (props) => {
-
   const renderProjects = (project) => {
     return <Project key={project.id} project={project}/>
   }

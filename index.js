@@ -9,7 +9,10 @@ const path = require("path"),
 const DIST_DIR = path.join(__dirname, "dist"),
       PORT = process.env.PORT || 3000,
       app = express(),
-      routes = require('./routes');
+      graphqlHTTP = require('express-graphql'),
+      routes = require('./routes'),
+      schema = require('./db/schema'),
+      root = require('./db/root');
 
 app.use(function(req,res,next) {
   res.header("Access-Control-Allow-Origin", '*')
@@ -22,6 +25,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(DIST_DIR));
 
 app.use("/api", routes);
+app.use("/graphql", graphqlHTTP({
+  schema: schema,
+  rootValue: root,
+  graphiql: true
+}))
 
 app.get("*", function (req, res) {
   res.sendFile(path.join(DIST_DIR, "index.html"));

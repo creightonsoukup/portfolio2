@@ -28,7 +28,6 @@
     }
   }
 }
-
 .navbar {
   max-height: 85px;
   width: 100vw;
@@ -39,6 +38,7 @@
   align-items: center;
   position: fixed;
   background-color: black;
+  z-index: 100;
   .collapse {
     i {
       color: white;

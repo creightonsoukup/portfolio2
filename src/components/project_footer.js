@@ -3,12 +3,12 @@ import React from 'react';
 const ProjectFooter = (props) => {
   return (
     <div className='project-footer'>
-      <div className='button'>
-        {'Live Site'}
-      </div>
-      <div className='button'>
-        {'GitHub'}
-      </div>
+      <a className='button' href={props.website}>
+        Live Site
+      </a>
+      <a className='button' href={props.github}>
+        GitHub
+      </a>
     </div>
   )
 }

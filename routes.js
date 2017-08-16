@@ -2,15 +2,10 @@ const express = require('express'),
       router = express.Router(),
       graphqlHTTP = require('express-graphql'),
       { buildSchema } = require('graphql'),
-      request = require('request');
+      request = require('request'),
+      schema = require('./db/schema');
 
 let token
-
-const schema = buildSchema(`
-        type Query {
-          hello: String
-        }
-      `);
 
 const root = { hello: () => 'Hello world!' };
 

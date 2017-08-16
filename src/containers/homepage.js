@@ -11,6 +11,7 @@ import Navbar from '../components/navbar'
 import BlogPreview from '../components/blog_preview'
 import { connect } from 'react-redux'
 import {getTwitterPosts} from '../actions/index'
+import projects from '../assets/projects'
 
  class Homepage extends Component {
    constructor(props) {
@@ -48,16 +49,6 @@ import {getTwitterPosts} from '../actions/index'
    render() {
      const tweets = this.props.tweets[0]
      const loader = _.debounce(() => {this.setState({showLoader: false})}, 3000)
-     const projectDemo = {}
-     projectDemo.links = ['https://www.google.com','https://github.com/creightonsoukup']
-     projectDemo.id = 1
-     projectDemo.screenUrl = 'https://s3.amazonaws.com/creightonsoukup/portfolio-site/screen.jpg'
-     projectDemo.name = 'Madison Mckinley Designs'
-     projectDemo.subheader = 'fullstack ecommerce solution including development, design, and content creation'
-     projectDemo.description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-     projectDemo.links = ['https://www.google.com','https://github.com/creightonsoukup']
-     const projects = []
-     projects.push(projectDemo)
      loader()
      return (
        <div className='homepage'>
